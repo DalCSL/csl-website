@@ -62,7 +62,7 @@ const itemVariants = {
 
 export default function Services() {
   return (
-    <GridBackground className="bg-gradient-to-br from-gray-50 via-white to-indigo-50 py-24 sm:py-32" id="services">
+    <GridBackground className="bg-linear-to-br from-gray-50 via-white to-indigo-50 py-24 sm:py-32" id="services">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <motion.div 
           className="mx-auto max-w-2xl lg:text-center"
@@ -93,16 +93,16 @@ export default function Services() {
                 variants={itemVariants}
               >
                 <motion.div
-                  className="relative overflow-hidden rounded-2xl bg-white/60 backdrop-blur-sm p-8 shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300"
+                  className="relative overflow-hidden rounded-2xl bg-white/60 backdrop-blur-xs p-8 shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300"
                   whileHover={{ scale: 1.02 }}
                 >
                   {/* Background gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                  <div className={`absolute inset-0 bg-linear-to-br ${service.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
                   
                   <div className="relative">
                     <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 mb-4">
                       <motion.div
-                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}
+                        className={`w-12 h-12 rounded-xl bg-linear-to-br ${service.color} flex items-center justify-center shadow-lg`}
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         whileTap={{ scale: 0.9 }}
                       >
@@ -130,7 +130,7 @@ export default function Services() {
               </div>
                   
                   {/* Hover effect border */}
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}></div>
+                  <div className={`absolute inset-0 rounded-2xl bg-linear-to-br ${service.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}></div>
                 </motion.div>
               </motion.div>
             ))}
@@ -144,7 +144,7 @@ export default function Services() {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <motion.div
-            className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border border-white/20"
+            className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-xs rounded-full px-6 py-3 shadow-lg border border-white/20"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

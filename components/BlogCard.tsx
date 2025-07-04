@@ -41,7 +41,7 @@ export function BlogCard({ post, className = "", href }: BlogCardProps) {
           <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
           
           <div className="flex flex-row items-center space-x-4 z-10">
-            <div className="h-10 w-10 rounded-full border-2 border-white bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+            <div className="h-10 w-10 rounded-full border-2 border-white bg-linear-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
               <span className="text-white font-semibold text-sm">
                 {post.author.split(' ').map(n => n[0]).join('')}
               </span>
@@ -56,7 +56,7 @@ export function BlogCard({ post, className = "", href }: BlogCardProps) {
           
           <div className="text content">
             <div className="mb-2">
-              <span className="inline-flex items-center rounded-md bg-white/20 backdrop-blur-sm px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-white/30">
+              <span className="inline-flex items-center rounded-md bg-white/20 backdrop-blur-xs px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-white/30">
                 {post.category}
               </span>
             </div>

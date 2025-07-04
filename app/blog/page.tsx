@@ -47,7 +47,7 @@ export default function Blog() {
         </Link>
       </motion.div>
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
+      <div className="bg-linear-to-r from-indigo-600 to-purple-600 text-white py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">

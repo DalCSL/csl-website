@@ -9,7 +9,7 @@ export default function LargeGridBackground({ children, className = "", ...props
     <div className={`relative isolate overflow-hidden ${className}`} {...props}>
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
-          className="absolute top-0 left-[max(50%,25rem)] h-[96rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(96rem_96rem_at_top,white,transparent)]"
+          className="absolute top-0 left-[max(50%,25rem)] h-384 w-512 -translate-x-1/2 stroke-gray-200 mask-[radial-gradient(96rem_96rem_at_top,white,transparent)]"
           aria-hidden="true"
         >
           <defs>

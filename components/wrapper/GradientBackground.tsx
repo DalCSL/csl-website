@@ -10,7 +10,7 @@ export default function GradientBackground({ children, className = "", ...props 
       {/* Background SVGs */}
       <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none select-none">
         <svg
-          className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+          className="relative left-[calc(50%-11rem)] -z-10 h-84.75 max-w-none -translate-x-1/2 rotate-30 sm:left-[calc(50%-30rem)] sm:h-169.5"
           viewBox="0 0 1155 678"
         >
           <defs>
@@ -40,7 +40,7 @@ export default function GradientBackground({ children, className = "", ...props 
       
       <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] pointer-events-none select-none">
         <svg
-          className="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+          className="relative left-[calc(50%+3rem)] h-84.75 max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-169.5"
           viewBox="0 0 1155 678"
         >
           <defs>

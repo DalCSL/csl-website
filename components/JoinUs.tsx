@@ -12,7 +12,7 @@ export default function JoinUs() {
       <svg
         viewBox="0 0 1097 845"
         aria-hidden="true"
-        className="hidden transform-gpu blur-3xl sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:w-[68.5625rem]"
+        className="hidden transform-gpu blur-3xl sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:w-274.25"
       >
         <path
           fill="url(#10724532-9d81-43d2-bb94-866e98dd6e42)"
@@ -36,7 +36,7 @@ export default function JoinUs() {
       <svg
         viewBox="0 0 1097 845"
         aria-hidden="true"
-        className="absolute left-1/2 -top-52 -z-10 w-[68.5625rem] -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0"
+        className="absolute left-1/2 -top-52 -z-10 w-274.25 -translate-x-1/2 transform-gpu blur-3xl sm:-top-112 sm:ml-16 sm:translate-x-0"
       >
         <path
           fill="url(#8ddc7edb-8983-4cd7-bccb-79ad21097d70)"
@@ -68,13 +68,13 @@ export default function JoinUs() {
           <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
             <a
               href="https://www.linkedin.com/company/dal-csl/"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Linkedin
             </a>
             <a
               href="https://www.instagram.com/dalcsl/"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Instagram
             </a>

@@ -42,7 +42,7 @@ export default function Stats() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
         {achievements.map((achievement) => (
           <div key={achievement.id} className="flex items-center gap-x-3 sm:gap-x-4 p-3 bg-white/5 rounded-lg border border-white/10 hover:bg-white/15 transition-all duration-300">
-            <achievement.icon className={`h-5 w-5 sm:h-6 sm:w-6 ${achievement.color} flex-shrink-0`} aria-hidden="true" />
+            <achievement.icon className={`h-5 w-5 sm:h-6 sm:w-6 ${achievement.color} shrink-0`} aria-hidden="true" />
             <div className="min-w-0 flex-1">
               <div className="text-base sm:text-lg font-bold text-white truncate">{achievement.value}</div>
               <div className="text-xs sm:text-sm text-indigo-200 font-medium truncate">{achievement.name}</div>
