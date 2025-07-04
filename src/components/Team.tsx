@@ -6,8 +6,8 @@ import {
   AiOutlineInstagram,
   AiOutlineLinkedin,
 } from "react-icons/ai";
-import { DirectionAwareHover } from "./ui/direction-aware-hover";
-import LargeGridBackground from "./backgrounds/large-grid-background";
+import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
+import LargeGridBackground from "@/components/backgrounds/large-grid-background";
 
 const people = [
   {

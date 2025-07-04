@@ -1,7 +1,7 @@
 "use client";
 
-import { AnimatedTestimonials } from "../ui/animated-testimonials";
-import GradientBackground from "../backgrounds/gradient-background";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import GradientBackground from "@/components/backgrounds/gradient-background";
 
 const testimonials = [
   {

@@ -1,12 +1,12 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Companies from "../Companies";
+import Companies from "@/components/Companies";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import GradientBackground from "../backgrounds/gradient-background";
+import GradientBackground from "@/components/backgrounds/gradient-background";
 
-const TextGenerateEffect = dynamic(() => import("../ui/text-generate-effect").then(mod => ({ default: mod.TextGenerateEffect })), {
+const TextGenerateEffect = dynamic(() => import("@/components/ui/text-generate-effect").then(mod => ({ default: mod.TextGenerateEffect })), {
   ssr: false,
   loading: () => (
     <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-6xl">
