@@ -1,4 +1,4 @@
-import GridBackground from "./wrapper/GridBackground";
+import GridBackground from "./backgrounds/gird-background";
 
 export default function CTA() {
   return (

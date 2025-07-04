@@ -1,4 +1,4 @@
-import LargeGridBackground from "./wrapper/LargeGridBackground";
+import LargeGridBackground from "./backgrounds/large-grid-background";
 
 export default function Content() {
   return (

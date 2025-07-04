@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Companies from "./Companies";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import GradientBackground from "./wrapper/GradientBackground";
+import GradientBackground from "./backgrounds/gradient-background";
 
 const TextGenerateEffect = dynamic(() => import("./ui/text-generate-effect").then(mod => ({ default: mod.TextGenerateEffect })), {
   ssr: false,

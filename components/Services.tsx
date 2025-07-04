@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { CalendarDays, Users, Trophy, Code, MessageSquare, Target, ArrowRight } from "lucide-react";
-import GridBackground from "./wrapper/GridBackground";
+import GridBackground from "./backgrounds/gird-background";
 
 const services = [
   {
