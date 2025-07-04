@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Companies from "./Companies";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import GradientBackground from "./wrapper/GradientBackground";
 

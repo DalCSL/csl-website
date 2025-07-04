@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "../../../utils/blog-posts";
-import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 
 type Props = {
@@ -43,12 +42,12 @@ export default function BlogPostPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-white pb-16">
       <div className="max-w-3xl mx-auto px-4 pt-12">
-        <motion.div className="group">
+        <div className="group">
           <Link href="/" className="inline-flex items-center gap-1 text-indigo-600 hover:text-indigo-800 font-semibold text-sm mb-8 transition-all transform">
             <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
             Back to Home
           </Link>
-        </motion.div>
+        </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
         <div className="flex items-center gap-4 mb-6">
           <span className="text-gray-500 text-sm">{post.author}</span>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { BlogCard } from "../../components/BlogCard";
 import { blogPosts } from "../../utils/blog-posts";

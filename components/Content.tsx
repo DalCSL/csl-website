@@ -1,8 +1,3 @@
-import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid";
 import LargeGridBackground from "./wrapper/LargeGridBackground";
 
 export default function Content() {

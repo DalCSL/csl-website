@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Home, Users, Calendar, MessageCircle, BookOpen, Trophy, Star, Info } from "lucide-react";
 
 const navigation = [
