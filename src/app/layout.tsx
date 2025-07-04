@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
-import '../styles/index.css'
-import '../styles/global.css'
+import './global.css'
 
 export const metadata: Metadata = {
   title: 'DAL CSL',

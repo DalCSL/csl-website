@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { blogPosts } from "../../../utils/blog-posts";
+import { blogPosts } from "../../../../utils/blog-posts";
 import { ArrowLeft } from "lucide-react";
 
 type Props = {
