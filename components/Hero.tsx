@@ -1,3 +1,5 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import Companies from "./Companies";
 import { motion } from "framer-motion";
