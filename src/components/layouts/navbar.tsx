@@ -4,7 +4,7 @@ import React from "react";
 import { FloatingNav } from "../ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 
-export function SecondaryNavbar() {
+export function Navbar() {
   const navItems = [
     {
       name: "Home",

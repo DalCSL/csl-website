@@ -16,7 +16,7 @@ export default function HomePage() {
       <Discord />
       <CTA />
       <Team />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <JoinUs />
     </div>
   );
