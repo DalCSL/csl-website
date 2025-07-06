@@ -39,7 +39,7 @@ export default function Hero() {
             </div>
 
             {/* Companies */}
-            <div className="w-full relative z-10 flex flex-col items-center gap-4 mt-32">
+            <div className="relative z-10 flex flex-col items-center gap-5 mt-32">
               <h3 className="text-2xl font-semibold text-slate-700">
                 Our members have gotten offers and interviews from these companies
               </h3>
