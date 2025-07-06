@@ -1,6 +1,9 @@
 import { Metadata } from 'next'
 import '@/app/global.css'
-import { SecondaryNavbar } from '@/components/layouts/secondary-navbar'
+import { Inter } from 'next/font/google'
+import { SecondaryNavbar } from '@/components/layouts/navbar'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'DAL CSL',
@@ -28,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <SecondaryNavbar />
         {children}
       </body>
