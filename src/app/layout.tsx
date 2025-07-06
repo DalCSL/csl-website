@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import '@/app/global.css'
+import { SecondaryNavbar } from '@/components/layouts/secondary-navbar'
 
 export const metadata: Metadata = {
   title: 'DAL CSL',
@@ -27,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SecondaryNavbar />
+        {children}
+      </body>
     </html>
   )
 }
