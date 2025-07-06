@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Companies from "@/components/Companies";
+import Companies from "@/components/companies";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import GradientBackground from "@/components/backgrounds/gradient-background";

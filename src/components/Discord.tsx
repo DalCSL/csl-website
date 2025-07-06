@@ -1,5 +1,5 @@
 import { MessageCircle, Users, Zap, Trophy } from "lucide-react";
-import Stats from "@/components/Stats";
+import Stats from "@/components/sections/stats";
 
 const features = [
   {

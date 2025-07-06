@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
-import { BlogCard } from "@/components/BlogCard";
+import { BlogCard } from "@/components/blog-card";
 import { blogPosts } from "@/data/blog-posts";
 
 const categories = [
