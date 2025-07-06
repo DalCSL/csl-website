@@ -1,6 +1,8 @@
 "use client";
 
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { Marquee } from "@/components/ui/marquee";
+import Image from "next/image";
+
 
 export default function Companies() {
   const logos = [
@@ -28,26 +30,12 @@ export default function Companies() {
   ];
 
   return (
-    <div className="bg-transparent pb-2 sm:pb-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex flex-wrap justify-center text-center">
-          <div className="w-full lg:w-6/12 px-4">
-            <h1 className="text-gray-900 text-3xl font-bold mb-4">
-              {/* Our members have gotten offers from these companies */}
-              {/* Get offers from these companies */}
-              Our members have gotten offers and interviews from these companies
-            </h1>
-          </div>
-        </div>
-        {/* <div> */}
-        <div>
-          <InfiniteMovingCards
-            items={logos}
-            direction="right"
-            speed="normal"
-           />
-        </div>
-      </div>
-    </div>
+    // Change duration will change the speed of the marquee
+    // Mobile: 60s, Desktop: 50s
+    <Marquee className="[--duration:60s] md:[--duration:50s]">
+      {logos.map((logo) => (
+        <Image key={logo.alt} src={logo.src} alt={logo.alt} width={200} height={100} className="h-12 w-auto mr-8 md:mr-12" />
+      ))}
+    </Marquee>
   );
 }
