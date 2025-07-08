@@ -41,7 +41,7 @@ export default function Companies() {
         <div>
           <InfiniteMovingCards
             items={logos}
-            direction="right"
+            direction="left"
             speed="normal"
            />
         </div>
