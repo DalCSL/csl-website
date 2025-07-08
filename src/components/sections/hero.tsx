@@ -11,10 +11,10 @@ export default function Hero() {
   return (
     <BackgroundGradientAnimation id="home">
       <BlurFade delay={0.1} duration={0.4} direction="up" inView={true} className="pt-24 md:pt-6">
-        <div className="max-w-sm mx-auto md:w-full flex-1 pt-24 sm:pt-48 pb-12">
+        <div className="w-full flex-1 pt-24 sm:pt-48 pb-12">
 
           {/* Hero Text */}
-          <div className="max-w-4xl mx-auto text-center flex flex-col gap-10">
+          <div className="max-w-sm sm:max-w-4xl mx-auto text-center flex flex-col gap-10">
             <h1 className="relative z-10 inline-block bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-3xl font-semibold leading-tight text-transparent drop-shadow-2xl sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
               The ONLY Society for Acing Coding Interviews
             </h1>
