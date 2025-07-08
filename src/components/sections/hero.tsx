@@ -10,7 +10,7 @@ import Companies from "../companies";
 export default function Hero() {
   return (
     <BackgroundGradientAnimation id="home">
-      <BlurFade delay={0.1} duration={0.3} direction="up" inView={true} className="pt-6">
+      <BlurFade delay={0.1} duration={0.4} direction="up" inView={true} className="pt-6">
         <div className="w-full flex-1 pt-24 sm:pt-48 pb-12">
 
           {/* Hero Text */}
@@ -40,7 +40,7 @@ export default function Hero() {
 
             {/* Companies Section */}
             <div className="relative z-10 flex flex-col items-center gap-5 mt-20">
-              <h3 className="text-2xl font-semibold text-slate-700">
+              <h3 className="text-2xl font-semibold text-slate-600">
                 Our members have gotten offers and interviews from these companies
               </h3>
               <Companies />

@@ -5,13 +5,13 @@ import Services from "@/components/sections/services";
 import Team from "@/components/sections/team-info";
 import Discord from "@/components/discord";
 import Testimonials from "@/components/sections/testimonials";
-import Content from "@/components/contents";
+import { About } from "@/components/sections/about";
 
 export default function HomePage() {
   return (
     <div>
       <Hero />
-      <Content />
+      <About />
       <Services />
       <Discord />
       <CTA />
