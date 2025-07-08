@@ -10,8 +10,8 @@ import Companies from "../companies";
 export default function Hero() {
   return (
     <BackgroundGradientAnimation id="home">
-      <BlurFade delay={0.1} duration={0.4} direction="up" inView={true} className="pt-6">
-        <div className="w-full flex-1 pt-24 sm:pt-48 pb-12">
+      <BlurFade delay={0.1} duration={0.4} direction="up" inView={true} className="pt-24 md:pt-6">
+        <div className="max-w-sm mx-auto md:w-full flex-1 pt-24 sm:pt-48 pb-12">
 
           {/* Hero Text */}
           <div className="max-w-4xl mx-auto text-center flex flex-col gap-10">

@@ -67,7 +67,7 @@ export const StickyScroll = ({
       ref={ref}
     >
       <div className="flex w-full max-w-6xl">
-        <div className="relative flex items-start pr-5 w-1/2">
+        <div className="relative flex items-start pr-5 w-full md:w-1/2">
           <div className="w-full max-w-2xl">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-[30vh] mr-10">
@@ -98,7 +98,7 @@ export const StickyScroll = ({
             <div className="h-40" />
           </div>
         </div>
-                <div className="w-1/2 pl-5">
+                <div className="hidden md:block w-1/2 pl-5">
           <div
             style={{ background: backgroundGradient }}
             className={cn(
