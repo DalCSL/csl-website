@@ -225,7 +225,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       const dx = mousePos.x - centerX;
       const dy = mousePos.y - centerY;
       const distance = Math.sqrt(dx * dx + dy * dy);
-      const speed = 0.001 + (distance / maxDistance) * 0.005;
+      const speed = 0.002 + (distance / maxDistance) * 0.008;
 
       if (targetRotation) {
         const elapsed = performance.now() - targetRotation.startTime;
