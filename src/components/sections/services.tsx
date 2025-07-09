@@ -9,7 +9,7 @@ import { services } from "@/data/services-data";
 export default function Services() {
   return (
     <GridBackground className="bg-linear-to-br from-slate-100 via-gray-50 to-zinc-100 py-24 sm:py-32" id="services">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+      <div className="mx-auto max-w-sm md:max-w-7xl px-6 lg:px-8 relative">
         <BlurFade
           className="mx-auto max-w-2xl lg:text-center"
           inView={true}
