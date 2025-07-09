@@ -6,6 +6,61 @@ import GridBackground from "@/components/backgrounds/gird-background";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import { AuroraText } from "@/components/ui/aurora-text";
+import { CodeComparison } from "@/components/ui/code-comparison";
+
+const beforeCode = `def two_sum(nums, target):
+    """
+    Brute force approach - O(n²) time complexity
+    Check every pair of numbers to find the target sum
+    """
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)): # [!code highlight]
+            if nums[i] + nums[j] == target: # [!code highlight]
+                return [i, j] # [!code highlight]
+    
+    return []  # No solution found
+
+# Example usage
+nums = [2, 7, 11, 15]
+target = 9
+result = two_sum(nums, target)
+print(f"Indices: {result}")  # Output: [0, 1]
+
+# Time Complexity: O(n²) # [!code highlight]
+# Space Complexity: O(1) # [!code highlight]`;
+
+const afterCode = `def two_sum(nums, target):
+    """
+    Optimized hash map approach - O(n) time complexity # [!code ++]
+    Use hash map to store seen numbers and their indices # [!code ++]
+    """
+    seen = {}  # Hash map to store number -> index # [!code focus]
+    
+    for i, num in enumerate(nums): # [!code focus]
+        complement = target - num # [!code focus]
+        
+        if complement in seen: # [!code focus]
+            return [seen[complement], i] # [!code focus]
+        
+        seen[num] = i # [!code focus]
+    
+    return []  # No solution found
+
+# Example usage
+nums = [2, 7, 11, 15]
+target = 9
+result = two_sum(nums, target)
+print(f"Indices: {result}")  # Output: [0, 1]
+
+# Time Complexity: O(n) # [!code ++]
+# Space Complexity: O(n) # [!code ++]`;
+
+// Create background components for each service
+const ServiceBackground = ({ color, className }: { color: string; className?: string }) => (
+  <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10 ${className}`}>
+    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+  </div>
+);
 
 const services = [
   {
@@ -18,6 +73,19 @@ const services = [
     href: "#discord",
     cta: "Start practicing",
     className: "col-span-3 lg:col-span-2",
+    background: (
+      <div className="absolute inset-0 h-full w-full scale-90 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90">
+        <CodeComparison
+          beforeCode={beforeCode}
+          afterCode={afterCode}
+          language="python"
+          filename="two_sum.py"
+          lightTheme="github-light"
+          darkTheme="github-dark"
+          highlightColor="rgba(59, 130, 246, 0.16)"
+        />
+      </div>
+    ),
   },
   {
     name: "Behavioral Interviews",
@@ -29,6 +97,7 @@ const services = [
     href: "#discord",
     cta: "Join session",
     className: "col-span-3 lg:col-span-1",
+    background: <ServiceBackground color="from-green-500 to-emerald-500" />,
   },
   {
     name: "System Design Interviews",
@@ -40,6 +109,7 @@ const services = [
     href: "#discord",
     cta: "Learn design",
     className: "col-span-3 lg:col-span-1",
+    background: <ServiceBackground color="from-purple-500 to-pink-500" />,
   },
   {
     name: "ICPC Training",
@@ -51,15 +121,9 @@ const services = [
     href: "#discord",
     cta: "Train now",
     className: "col-span-3 lg:col-span-2",
+    background: <ServiceBackground color="from-orange-500 to-red-500" />,
   },
 ];
-
-// Create background components for each service
-const ServiceBackground = ({ color, className }: { color: string; className?: string }) => (
-  <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10 ${className}`}>
-    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-  </div>
-);
 
 export default function Services() {
   return (
@@ -88,7 +152,7 @@ export default function Services() {
                 key={service.name}
                 name={service.name}
                 className={service.className}
-                background={<ServiceBackground color={service.color} />}
+                background={service.background}
                 Icon={service.icon}
                 description={service.description}
                 href={service.href}
