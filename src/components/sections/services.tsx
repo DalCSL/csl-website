@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
-import { CalendarDays, Users, Trophy, Code, MessageSquare, Target, ArrowRight } from "lucide-react";
+import { Trophy, Code, MessageSquare, Target } from "lucide-react";
 import GridBackground from "@/components/backgrounds/gird-background";
+import { BlurFade } from "@/components/ui/blur-fade";
+import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
+import { AuroraText } from "@/components/ui/aurora-text";
 
 const services = [
   {
@@ -12,6 +15,9 @@ const services = [
     // calendlyLink: "https://calendly.com/your-link/technical-interview",
     color: "from-blue-500 to-cyan-500",
     bgColor: "bg-blue-50",
+    href: "#discord",
+    cta: "Start practicing",
+    className: "col-span-3 lg:col-span-2",
   },
   {
     name: "Behavioral Interviews",
@@ -20,6 +26,9 @@ const services = [
     // calendlyLink: "https://calendly.com/your-link/behavioral-interview",
     color: "from-green-500 to-emerald-500",
     bgColor: "bg-green-50",
+    href: "#discord",
+    cta: "Join session",
+    className: "col-span-3 lg:col-span-1",
   },
   {
     name: "System Design Interviews",
@@ -28,6 +37,9 @@ const services = [
     // calendlyLink: "https://calendly.com/your-link/system-design",
     color: "from-purple-500 to-pink-500",
     bgColor: "bg-purple-50",
+    href: "#discord",
+    cta: "Learn design",
+    className: "col-span-3 lg:col-span-1",
   },
   {
     name: "ICPC Training",
@@ -36,114 +48,61 @@ const services = [
     // calendlyLink: "https://calendly.com/your-link/icpc-training",
     color: "from-orange-500 to-red-500",
     bgColor: "bg-orange-50",
+    href: "#discord",
+    cta: "Train now",
+    className: "col-span-3 lg:col-span-2",
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5
-    }
-  }
-};
+// Create background components for each service
+const ServiceBackground = ({ color, className }: { color: string; className?: string }) => (
+  <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10 ${className}`}>
+    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+  </div>
+);
 
 export default function Services() {
   return (
     <GridBackground className="bg-linear-to-br from-gray-50 via-white to-indigo-50 py-24 sm:py-32" id="services">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
-        <motion.div 
+        <BlurFade
           className="mx-auto max-w-2xl lg:text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          inView={true}
         >
           <h2 className="text-base font-semibold leading-7 text-indigo-600">Our Services</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to ace your interviews
+            Everything you need to <AuroraText>ACE</AuroraText> your interviews
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             From technical interviews to competitive programming, we provide comprehensive training to help you succeed in your career.
           </p>
-        </motion.div>
-        
-        <motion.div 
-          className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+        </BlurFade>
+
+        <BlurFade
+          className="mx-auto mt-16 max-w-6xl sm:mt-20 lg:mt-24"
+          inView={true}
         >
-          <dl className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+          <BentoGrid>
             {services.map((service, index) => (
-              <motion.div 
-                key={service.name} 
-                className="flex flex-col group"
-                variants={itemVariants}
-              >
-                <motion.div
-                  className="relative overflow-hidden rounded-2xl bg-white/60 backdrop-blur-xs p-8 shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  {/* Background gradient */}
-                  <div className={`absolute inset-0 bg-linear-to-br ${service.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                  
-                  <div className="relative">
-                    <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 mb-4">
-                      <motion.div
-                        className={`w-12 h-12 rounded-xl bg-linear-to-br ${service.color} flex items-center justify-center shadow-lg`}
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        whileTap={{ scale: 0.9 }}
-                      >
-                        <service.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                      </motion.div>
-                      <span className="text-lg">{service.name}</span>
-                    </dt>
-                    
-                    <dd className="flex flex-auto flex-col text-base leading-7 text-gray-600">
-                      <p className="flex-auto mb-6">{service.description}</p>
-                      <motion.div
-                        className="inline-flex items-center gap-2"
-                      >
-                        {/* <a
-                          href={service.calendlyLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-500 transition-all flex flex-row items-center transform"
-                        >
-                          Book a session 
-                          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                        </a> */}
-                      </motion.div>
-                    </dd>
-              </div>
-                  
-                  {/* Hover effect border */}
-                  <div className={`absolute inset-0 rounded-2xl bg-linear-to-br ${service.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10`}></div>
-                </motion.div>
-              </motion.div>
+              <BentoCard
+                key={service.name}
+                name={service.name}
+                className={service.className}
+                background={<ServiceBackground color={service.color} />}
+                Icon={service.icon}
+                description={service.description}
+                href={service.href}
+                cta={service.cta}
+              />
             ))}
-          </dl>
-        </motion.div>
-        
-        <motion.div 
+          </BentoGrid>
+        </BlurFade>
+
+        <BlurFade
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          inView={true}
         >
-          <motion.div
+          <BlurFade
             className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-xs rounded-full px-6 py-3 shadow-lg border border-white/20"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -155,8 +114,8 @@ export default function Services() {
             >
               Join our community →
             </a>
-          </motion.div>
-        </motion.div>
+          </BlurFade>
+        </BlurFade>
       </div>
     </GridBackground>
   );
