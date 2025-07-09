@@ -1,63 +1,70 @@
 "use client";
 
-import { Trophy, Code, MessageSquare, Target } from "lucide-react";
+import { Trophy, Code, MessageSquare, Target, Users, User, Heart, BrainCircuit, Lightbulb } from "lucide-react";
 import GridBackground from "@/components/backgrounds/gird-background";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { CodeComparison } from "@/components/ui/code-comparison";
+import { OrbitingCircles } from "@/components/ui/orbiting-circles";
+import { beforeCode, afterCode } from "@/data/code-data";
 
-const beforeCode = `def two_sum(nums, target):
-    """
-    Brute force approach - O(n²) time complexity
-    Check every pair of numbers to find the target sum
-    """
-    for i in range(len(nums)):
-        for j in range(i + 1, len(nums)): # [!code highlight]
-            if nums[i] + nums[j] == target: # [!code highlight]
-                return [i, j] # [!code highlight]
-    
-    return []  # No solution found
-
-# Example usage
-nums = [2, 7, 11, 15]
-target = 9
-result = two_sum(nums, target)
-print(f"Indices: {result}")  # Output: [0, 1]
-
-# Time Complexity: O(n²) # [!code highlight]
-# Space Complexity: O(1) # [!code highlight]`;
-
-const afterCode = `def two_sum(nums, target):
-    """
-    Optimized hash map approach - O(n) time complexity # [!code ++]
-    Use hash map to store seen numbers and their indices # [!code ++]
-    """
-    seen = {}  # Hash map to store number -> index # [!code focus]
-    
-    for i, num in enumerate(nums): # [!code focus]
-        complement = target - num # [!code focus]
-        
-        if complement in seen: # [!code focus]
-            return [seen[complement], i] # [!code focus]
-        
-        seen[num] = i # [!code focus]
-    
-    return []  # No solution found
-
-# Example usage
-nums = [2, 7, 11, 15]
-target = 9
-result = two_sum(nums, target)
-print(f"Indices: {result}")  # Output: [0, 1]
-
-# Time Complexity: O(n) # [!code ++]
-# Space Complexity: O(n) # [!code ++]`;
+// Create icons for behavioral interview orbiting circles
+const BehavioralIcons = {
+  messageSquare: () => (
+    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-100 dark:bg-green-900">
+      <MessageSquare className="h-4 w-4 text-green-600 dark:text-green-400" />
+    </div>
+  ),
+  users: () => (
+    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-100 dark:bg-red-900">
+      <Users className="h-4 w-4 text-red-600 dark:text-red-400" />
+    </div>
+  ),
+  user: () => (
+    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-100 dark:bg-sky-900">
+      <User className="h-4 w-4 text-sky-600 dark:text-sky-400" />
+    </div>
+  ),
+  heart: () => (
+    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900">
+      <Heart className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+    </div>
+  ),
+  brain: () => (
+    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900">
+      <BrainCircuit className="h-4 w-4 text-yellow-600 dark:text-yellow-400" />
+    </div>
+  ),
+  lightbulb: () => (
+    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900">
+      <Lightbulb className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+    </div>
+  ),
+};
 
 // Create background components for each service
 const ServiceBackground = ({ color, className }: { color: string; className?: string }) => (
   <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-10 ${className}`}>
     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+  </div>
+);
+
+// Behavioral Interview Orbiting Background
+const BehavioralOrbitingBackground = () => (
+  <div className="absolute right-2 top-4 h-[300px] w-full scale-75 transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90">
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+      <OrbitingCircles iconSize={56} radius={120} duration={20}>
+        <BehavioralIcons.messageSquare />
+        <BehavioralIcons.users />
+        <BehavioralIcons.heart />
+        <BehavioralIcons.brain />
+      </OrbitingCircles>
+      <OrbitingCircles iconSize={36} radius={60} duration={15} reverse>
+        <BehavioralIcons.user />
+        <BehavioralIcons.lightbulb />
+      </OrbitingCircles>
+    </div>
   </div>
 );
 
@@ -96,7 +103,7 @@ const services = [
     href: "#discord",
     cta: "Join session",
     className: "col-span-3 lg:col-span-1",
-    background: <ServiceBackground color="from-green-500 to-emerald-500" />,
+    background: <BehavioralOrbitingBackground />,
   },
   {
     name: "System Design Interviews",
@@ -148,7 +155,7 @@ export default function Services() {
           <BentoGrid>
             {services.map((service, index) => (
               <BentoCard
-                key={service.name}
+                key={index}
                 name={service.name}
                 className={service.className}
                 background={service.background}
