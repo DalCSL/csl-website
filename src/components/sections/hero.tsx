@@ -40,7 +40,7 @@ export function Hero() {
 
             {/* Companies Section */}
             <div className="relative z-10 flex flex-col items-center gap-5 mt-20">
-              <h3 className="text-2xl font-semibold text-slate-600">
+              <h3 className="text-md md:text-xl lg:text-2xl font-semibold text-slate-600">
                 Our members have gotten offers and interviews from these companies
               </h3>
               <Companies />

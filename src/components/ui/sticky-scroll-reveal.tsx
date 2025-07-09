@@ -62,14 +62,14 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="relative flex h-full py-20 justify-center"
+      className="relative flex h-full md:py-20 justify-center"
       ref={ref}
     >
       <div className="flex w-full">
-        <div className="relative flex items-start pr-5 w-full max-w-3xl">
-          <div className="w-full max-w-2xl">
+        <div className="relative flex items-start pr-5 flex-1">
+          <div className="w-full">
             {content.map((item, index) => (
-              <div key={item.title + index} className="my-[25vh] mr-10 ml-[12vw]">
+              <div key={item.title + index} className="my-[25vh] md:my-[30vh] mr-10 ml-[12vw]">
                 <motion.h2
                   initial={{
                     opacity: 0,
@@ -77,7 +77,7 @@ export const StickyScroll = ({
                   animate={{
                     opacity: activeCard === index ? 1 : 0.1,
                   }}
-                  className="text-xl sm:text-3xl font-bold text-slate-100"
+                  className="text-2xl sm:text-3xl font-bold text-slate-100"
                 >
                   {item.title}
                 </motion.h2>
@@ -88,7 +88,7 @@ export const StickyScroll = ({
                   animate={{
                     opacity: activeCard === index ? 1 : 0.1,
                   }}
-                  className="text-lg mt-10 text-slate-300"
+                  className="text-md sm:text-lg mt-10 text-slate-300"
                 >
                   {item.description}
                 </motion.p>
@@ -97,11 +97,11 @@ export const StickyScroll = ({
             <div className="h-40" />
           </div>
         </div>
-        <div className="hidden md:block flex-1 pl-5">
+        <div className="hidden md:block flex-2 pl-5">
           <div
             style={{ background: backgroundGradient }}
             className={cn(
-              "sticky top-10 h-[calc(100vh-5rem)] w-full overflow-hidden rounded-md bg-white",
+              "sticky top-[15vh] h-[70vh] w-full overflow-hidden rounded-md bg-white",
               contentClassName,
             )}
           >

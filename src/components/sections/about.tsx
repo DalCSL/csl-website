@@ -19,8 +19,8 @@ const content = [
     description:
       "We conduct workshops, seminars, talks by industry experts, and weekly competitive programming contests to equip students with the most cutting-edge knowledge in computer science, ensuring their skills remain at the forefront of the latest developments in the field.",
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-        Version control
+      <div className="relative w-full h-full">
+        <Image src="/assets/workshop.jpg" alt="workshop" fill />
       </div>
     ),
   },
@@ -29,8 +29,8 @@ const content = [
     description:
       "Additionally, we provide students with practical experience by working on projects relevant to the field which helps them land opportunities for internships and co-op positions.The main goal of this society is to create leaders for the future. We give students the tools they need to succeed in the competitive field of computer science and become future leaders.",
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Running out of content
+      <div className="relative w-full h-full">
+        <Image src="/assets/provide.jpg" alt="provide" fill />
       </div>
     ),
   },
