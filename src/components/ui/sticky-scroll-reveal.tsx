@@ -18,7 +18,6 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    // Use page scroll instead of container scroll
     target: ref,
     offset: ["start start", "end end"],
   });
@@ -70,15 +69,15 @@ export const StickyScroll = ({
         <div className="relative flex items-start pr-5 w-full max-w-3xl">
           <div className="w-full max-w-2xl">
             {content.map((item, index) => (
-              <div key={item.title + index} className="my-[30vh] mr-10 ml-[12vw]">
+              <div key={item.title + index} className="my-[25vh] mr-10 ml-[12vw]">
                 <motion.h2
                   initial={{
                     opacity: 0,
                   }}
                   animate={{
-                    opacity: activeCard === index ? 1 : 0.3,
+                    opacity: activeCard === index ? 1 : 0.1,
                   }}
-                  className="text-2xl font-bold text-slate-100"
+                  className="text-xl sm:text-3xl font-bold text-slate-100"
                 >
                   {item.title}
                 </motion.h2>
@@ -87,9 +86,9 @@ export const StickyScroll = ({
                     opacity: 0,
                   }}
                   animate={{
-                    opacity: activeCard === index ? 1 : 0.3,
+                    opacity: activeCard === index ? 1 : 0.1,
                   }}
-                  className="text-kg mt-10 text-slate-300"
+                  className="text-lg mt-10 text-slate-300"
                 >
                   {item.description}
                 </motion.p>

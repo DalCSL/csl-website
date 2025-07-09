@@ -9,8 +9,8 @@ const content = [
     description:
         "The Dalhousie Computer Science Leaders Society provides an environment for students to explore and deepen their understanding of computer science fundamentals: problem-solving,data structures, algorithms, cloud computing, systems design,and real-world applications.",
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Collaborative Editing
+      <div className="relative w-full h-full">
+        <Image src="/assets/c-code.png" alt="c-code" fill />
       </div>
     ),
   },

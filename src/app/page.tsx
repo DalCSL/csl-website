@@ -1,5 +1,5 @@
 import CTA from "@/components/sections/cta";
-import Hero from "@/components/sections/hero";
+import { Hero } from "@/components/sections/hero";
 import JoinUs from "@/components/layouts/footer";
 import Services from "@/components/sections/services";
 import Team from "@/components/sections/team-info";

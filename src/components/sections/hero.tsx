@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Companies from "../companies";
 
-export default function Hero() {
+export function Hero() {
   return (
     <BackgroundGradientAnimation id="home">
       <BlurFade delay={0.1} duration={0.4} direction="up" inView={true} className="pt-24 md:pt-6">
