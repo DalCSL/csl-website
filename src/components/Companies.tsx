@@ -4,7 +4,7 @@ import { Marquee } from "@/components/ui/marquee";
 import Image from "next/image";
 
 
-export default function Companies() {
+export function Companies() {
   const logos = [
     { src: "/assets/logos/amazon.png", alt: "Amazon" },
     { src: "/assets/logos/google.png", alt: "Google" },
