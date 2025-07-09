@@ -115,10 +115,10 @@ export function CodeComparison({
   return (
     <div className="mx-auto w-full max-w-5xl">
       <div className="group relative w-full overflow-hidden rounded-md border border-border">
-        <div className="relative grid md:grid-cols-2">
+        <div className="relative flex flex-col-reverse md:grid md:grid-cols-2">
           <div
             className={cn(
-              "leftside group/left border-primary/20 md:border-r",
+              "leftside group/left border-primary/20 md:border-r border-t md:border-t-0",
               hasLeftFocus &&
                 "[&>div>pre>code>:not(.focused)]:!opacity-50 [&>div>pre>code>:not(.focused)]:!blur-[0.095rem]",
               "[&>div>pre>code>:not(.focused)]:transition-all [&>div>pre>code>:not(.focused)]:duration-300",
@@ -133,7 +133,7 @@ export function CodeComparison({
           </div>
           <div
             className={cn(
-              "rightside group/right border-t border-primary/20 md:border-t-0",
+              "rightside group/right border-primary/20",
               hasRightFocus &&
                 "[&>div>pre>code>:not(.focused)]:!opacity-50 [&>div>pre>code>:not(.focused)]:!blur-[0.095rem]",
               "[&>div>pre>code>:not(.focused)]:transition-all [&>div>pre>code>:not(.focused)]:duration-300",

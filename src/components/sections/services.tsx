@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { Trophy, Code, MessageSquare, Target } from "lucide-react";
 import GridBackground from "@/components/backgrounds/gird-background";
 import { BlurFade } from "@/components/ui/blur-fade";
