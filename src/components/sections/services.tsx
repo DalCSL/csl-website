@@ -15,7 +15,7 @@ export default function Services() {
           inView={true}
         >
           <h2 className="text-base font-semibold leading-7 text-slate-700">Our Services</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             Everything you need to <AuroraText>ACE</AuroraText> your interviews
           </p>
           <p className="mt-6 text-lg leading-8 text-slate-600">

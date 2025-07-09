@@ -70,7 +70,7 @@ export const services = [
           <NumberTicker
             value={2}
             startValue={0}
-            delay={0.5}
+            delay={0.2}
             className="text-7xl font-bold tracking-tighter text-slate-800/80 dark:text-slate-200/80"
           />
           <span className="text-4xl font-bold tracking-tight text-slate-800/80 dark:text-slate-200/80">x</span>
