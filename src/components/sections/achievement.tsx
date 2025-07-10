@@ -109,7 +109,7 @@ const achievements = [
 
 export function Achievement() {
   return (
-    <div className="pt-24 sm:pt-32 pb-12 sm:pb-16 max-w-sm md:max-w-6xl mx-auto" id="connect">
+    <div className="pt-24 sm:pt-32 pb-12 sm:pb-16 max-w-sm md:max-w-6xl mx-auto" id="achievements">
       <div className="mx-auto max-w-none px-6 lg:px-8">
         {/* Achievements Section */}
         <div className="mx-auto max-w-4xl lg:text-center mb-16">
