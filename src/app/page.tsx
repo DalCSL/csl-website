@@ -1,6 +1,6 @@
 import CTA from "@/components/sections/cta";
 import { Hero } from "@/components/sections/hero";
-import JoinUs from "@/components/layouts/footer";
+import { Footer } from "@/components/layouts/footer";
 import { Services } from "@/components/sections/services";
 import Team from "@/components/sections/team-info";
 import { Achievement } from "@/components/sections/achievement";
@@ -19,7 +19,7 @@ export default function HomePage() {
       <CTA />
       <Team />
       <Testimonials />
-      <JoinUs />
+      <Footer />
     </div>
   );
 } 

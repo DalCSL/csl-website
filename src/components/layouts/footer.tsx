@@ -1,7 +1,7 @@
-export default function JoinUs() {
+export function Footer() {
   return (
     <div
-      className="relative isolate flex overflow-hidden bg-gray-900 py-24 sm:py-32"
+      className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32"
       id="contact"
     >
       <img
@@ -58,7 +58,7 @@ export default function JoinUs() {
         </defs>
       </svg>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto max-w-7xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Come code with us
           </h2>
@@ -80,9 +80,6 @@ export default function JoinUs() {
             </a>
           </div>
         </div>
-      </div>
-      <div className="w-3/5">
-        {/* <UserForm /> */}
       </div>
     </div>
   );

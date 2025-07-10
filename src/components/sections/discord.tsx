@@ -1,8 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { MessageCircle, Users, Zap, Trophy, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { MessageCircle, Users, Zap, Trophy, ArrowRight, CheckCircle2 } from "lucide-react";
 import { FlickeringGrid } from "@/components/ui/flickering-grid";
+import Image from "next/image";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import Link from "next/link";
+
+const DiscordIcon = `https://cdn.simpleicons.org/discord/discord.svg`
 
 const features = [
   {
@@ -34,7 +38,7 @@ const features = [
 export function Discord() {
   return (
     <FlickeringGrid
-      className="relative max-h-screen flex items-center py-24 sm:py-32 overflow-hidden"
+      className="relative min-h-screen flex items-center py-24 sm:py-32 overflow-hidden"
       id="discord"
       squareSize={4}
       gridGap={6}
@@ -44,7 +48,7 @@ export function Discord() {
     >
 
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 w-full">
+      <div className="relative mx-auto max-w-sm md:max-w-6xl px-6 lg:px-8 w-full">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <div className="mx-auto max-w-4xl lg:text-center mb-16">
@@ -58,12 +62,12 @@ export function Discord() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
           {/* Features Section */}
-          <div className={`space-y-8 transition-all duration-1000 delay-500 transform`}>
+          <div className="space-y-8 transition-all duration-1000 delay-500 transform">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
                 <div
                   key={feature.name}
-                  className={`group relative bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-gray-600/30 hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer transform`}
+                  className="group relative bg-white/90 backdrop-blur-md rounded-2xl p-6 border border-gray-600/30 hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer transform"
                 >
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-3">
@@ -90,17 +94,16 @@ export function Discord() {
           </div>
 
           {/* Discord CTA Card */}
-          <div className={`flex justify-center xl:justify-end transition-all duration-1000 delay-700 transform`}>
+          <div className="flex justify-center xl:justify-end transition-all duration-1000 delay-700 transfor">
             <div className="relative group">
               {/* Glow Effect */}
               <div className="absolute -inset-1 bg-gray-600 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
 
-              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl max-w-md w-full border border-gray-600/30 group-hover:bg-white/15 transition-all duration-300">
+              <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl max-w-md w-full border border-gray-600/30 group-hover:bg-white/15 transition-all duration-300">
                 {/* Discord Icon with Animation */}
                 <div className="text-center mb-6">
-                  <div className="relative mx-auto h-20 w-20 bg-gray-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                    <MessageCircle className="h-10 w-10 text-gray-900" />
-                    <div className="absolute -inset-2 bg-gray-300 rounded-2xl blur opacity-20 animate-pulse"></div>
+                  <div className="relative mx-auto h-20 w-20 rounded-2xl flex items-center justify-center mb-4">
+                    <Image src={DiscordIcon} alt="Discord" width={40} height={40} />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Join Our Discord</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -119,17 +122,20 @@ export function Discord() {
                 </div>
 
                 {/* CTA Button */}
-                <a
+                <Link
                   href="https://discord.gg/aAHD6f4zFp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/button relative inline-flex items-center justify-center w-full rounded-2xl bg-white text-gray-900 px-6 py-4 text-sm font-semibold shadow-xl hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-300 hover:scale-105 overflow-hidden hover:bg-gray-100"
                 >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Join Discord Server
-                    <ArrowRight className="w-4 h-4 group-hover/button:translate-x-1 transition-transform duration-300" />
-                  </span>
-                </a>
+                  <RainbowButton
+                    className="group/button relative inline-flex items-center justify-center w-full rounded-2xl text-white h-full"
+                  >
+                    <span className="relative z-10 flex items-center gap-2 text-white">
+                      Join Discord Server
+                      <ArrowRight className="w-4 h-4 group-hover/button:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </RainbowButton>
+                </Link>
 
                 <p className="text-xs text-gray-600 mt-4 text-center">
                   Free to join • No registration required
