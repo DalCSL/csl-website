@@ -1,9 +1,9 @@
 import CTA from "@/components/sections/cta";
 import { Hero } from "@/components/sections/hero";
 import JoinUs from "@/components/layouts/footer";
-import Services from "@/components/sections/services";
+import { Services } from "@/components/sections/services";
 import Team from "@/components/sections/team-info";
-import Discord from "@/components/discord";
+import { Connect } from "@/components/sections/connect";
 import Testimonials from "@/components/sections/testimonials";
 import { About } from "@/components/sections/about";
 
@@ -13,7 +13,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <Services />
-      <Discord />
+      <Connect />
       <CTA />
       <Team />
       {/* <Testimonials /> */}

@@ -6,7 +6,7 @@ import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { services } from "@/data/services-data";
 
-export default function Services() {
+export function Services() {
   return (
     <GridBackground className="bg-linear-to-br from-slate-100 via-gray-50 to-zinc-100 py-24 sm:py-32" id="services">
       <div className="mx-auto max-w-sm md:max-w-7xl px-6 lg:px-8 relative">
@@ -14,7 +14,7 @@ export default function Services() {
           className="mx-auto max-w-2xl lg:text-center"
           inView={true}
         >
-          <h2 className="text-base font-semibold leading-7 text-slate-700">Our Services</h2>
+          <h2 className="text-base font-semibold leading-7 text-indigo-600">Our Services</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             Everything you need to <AuroraText>ACE</AuroraText> your interviews
           </p>
@@ -55,7 +55,7 @@ export default function Services() {
             <span className="text-sm font-medium text-slate-700">Ready to get started?</span>
             <a
               href="#discord"
-              className="text-sm font-semibold text-slate-800 hover:text-slate-600 transition-colors"
+              className="text-sm font-semibold text-indigo-600 hover:text-indigo-500 transition-colors"
             >
               Join our community →
             </a>
