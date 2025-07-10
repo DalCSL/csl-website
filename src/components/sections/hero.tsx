@@ -5,7 +5,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { Companies } from "@/components/companies";
+import { Companies } from "@/components/sections/companies";
 
 export function Hero() {
   return (
