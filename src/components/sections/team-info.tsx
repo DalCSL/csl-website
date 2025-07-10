@@ -40,6 +40,12 @@ const people = [
     imageUrl: "/assets/team/moh.jpeg",
     linkedin: "https://www.linkedin.com/in/mouhamadou-falilou-niang-a0aba8172/",
   },
+  {
+    name: "Tobi Onibudo",
+    role: "Advisor",
+    imageUrl: "/assets/team/tobi.jpeg",
+    linkedin: "https://www.linkedin.com/in/tobi-onibudo/",
+  }
 ];
 
 export default function Team() {
