@@ -72,10 +72,12 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-base">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-base font-semibold relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-5 py-2 rounded-full">
-          <span>Login</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button>
+        <Link href="#discord">
+          <button className="border text-base font-semibold relative border-neutral-200 dark:border-white/[0.2] text-indigo-600 dark:text-white px-5 py-2 rounded-full">
+            <span>Join Us</span>
+            <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+          </button>
+        </Link>
       </motion.div>
     </AnimatePresence>
   );

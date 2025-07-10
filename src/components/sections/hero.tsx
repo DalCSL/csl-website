@@ -25,7 +25,7 @@ export function Hero() {
 
             {/* Actions */}
             <div className="relative z-10 flex justify-center gap-4">
-              <Button variant="default" size="lg" asChild className="rounded-2xl py-6 px-10">
+              <Button variant="default" size="lg" asChild className="rounded-2xl py-6 px-10 bg-indigo-600 text-white hover:bg-indigo-700">
                 <Link href="#discord" className="flex items-center gap-2">
                   Join Us
                 </Link>
