@@ -1,90 +1,148 @@
 "use client";
 
-import React from "react";
-import { MessageCircle, Users, Zap, Trophy } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { MessageCircle, Users, Zap, Trophy, ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
+import { FlickeringGrid } from "@/components/ui/flickering-grid";
 
 const features = [
   {
     name: "Real-time Discussions",
     description: "Connect with fellow members and get instant help with coding problems.",
     icon: MessageCircle,
+    delay: 0.1,
   },
   {
     name: "Study Groups",
     description: "Join topic-specific channels and study together with like-minded peers.",
     icon: Users,
+    delay: 0.2,
   },
   {
     name: "Quick Tips",
     description: "Get daily coding tips, interview strategies, and industry insights.",
     icon: Zap,
+    delay: 0.3,
   },
   {
     name: "Competition Prep",
     description: "Dedicated channels for ICPC, Codeforces and any other competitive programming.",
     icon: Trophy,
+    delay: 0.4,
   },
 ];
 
 export function Discord() {
   return (
-    <div className="bg-white py-24 sm:py-32" id="discord">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="bg-indigo-600 rounded-3xl py-16 sm:py-20">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-indigo-200">Join Our Community</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Connect with fellow developers
-            </p>
-            <p className="mt-6 text-lg leading-8 text-indigo-200">
-              Join our Discord server to connect with other members, get help with coding problems, and stay updated with the latest opportunities.
+    <FlickeringGrid
+      className="relative max-h-screen flex items-center py-24 sm:py-32 overflow-hidden"
+      id="discord"
+      squareSize={4}
+      gridGap={6}
+      color="#6B7280"
+      maxOpacity={0.2}
+      flickerChance={0.1}
+    >
+
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 w-full">
+        {/* Header Section */}
+        <div className="text-center max-w-4xl mx-auto mb-20">
+          <div className="mx-auto max-w-4xl lg:text-center mb-16">
+            <h2 className="text-base font-semibold leading-7 text-indigo-600">Join Our Community</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Connect with our members and start your journey
             </p>
           </div>
-          
-          <div className="mx-auto mt-16 max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {features.map((feature) => (
-                    <div key={feature.name} className="relative">
-                      <div className="flex items-center gap-x-3">
-                        <feature.icon className="h-5 w-5 text-indigo-200" aria-hidden="true" />
-                        <h3 className="text-sm font-semibold leading-6 text-white">{feature.name}</h3>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
+          {/* Features Section */}
+          <div className={`space-y-8 transition-all duration-1000 delay-500 transform`}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {features.map((feature, index) => (
+                <div
+                  key={feature.name}
+                  className={`group relative bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-gray-600/30 hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer transform`}
+                >
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="p-2 rounded-lg bg-gray-200 transition-transform duration-300 group-hover:scale-110">
+                        <feature.icon className="h-5 w-5 text-gray-900" />
                       </div>
-                      <p className="mt-2 text-sm text-indigo-200">{feature.description}</p>
+                      <h3 className="font-semibold text-gray-900 group-hover:text-gray-700 transition-colors">
+                        {feature.name}
+                      </h3>
+                    </div>
+                    <p className="text-sm text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors">
+                      {feature.description}
+                    </p>
+                  </div>
+
+                  {/* Hover Effect */}
+                  <div className="absolute inset-0 bg-gray-600 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+
+                  {/* Animated Border */}
+                  <div className="absolute inset-0 rounded-2xl bg-gray-500 opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-sm -z-10"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Discord CTA Card */}
+          <div className={`flex justify-center xl:justify-end transition-all duration-1000 delay-700 transform`}>
+            <div className="relative group">
+              {/* Glow Effect */}
+              <div className="absolute -inset-1 bg-gray-600 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
+
+              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-2xl max-w-md w-full border border-gray-600/30 group-hover:bg-white/15 transition-all duration-300">
+                {/* Discord Icon with Animation */}
+                <div className="text-center mb-6">
+                  <div className="relative mx-auto h-20 w-20 bg-gray-200 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                    <MessageCircle className="h-10 w-10 text-gray-900" />
+                    <div className="absolute -inset-2 bg-gray-300 rounded-2xl blur opacity-20 animate-pulse"></div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Join Our Discord</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Connect with our members and start your journey to success.
+                  </p>
+                </div>
+
+                {/* Benefits List */}
+                <div className="space-y-3 mb-8">
+                  {["24/7 Community Support", "Career Guidance", "Interview Prep", "Coding Help"].map((benefit, index) => (
+                    <div key={benefit} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-gray-700" />
+                      <span className="text-sm text-gray-700">{benefit}</span>
                     </div>
                   ))}
                 </div>
-              </div>
-              
-              <div className="flex flex-col items-center justify-center">
-                <div className="bg-white rounded-2xl p-8 shadow-xl max-w-sm w-full">
-                  <div className="text-center">
-                    <div className="mx-auto h-16 w-16 bg-indigo-600 rounded-full flex items-center justify-center mb-4">
-                      <MessageCircle className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Join Our Discord</h3>
-                    <p className="text-sm text-gray-600 mb-6">
-                      Connect with 500+ members and start your journey to success.
-                    </p>
-                    <a
-                      href="https://discord.gg/aAHD6f4zFp"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-full rounded-md bg-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors"
-                    >
-                      Join Discord Server
-                    </a>
-                    <p className="text-xs text-gray-500 mt-3">
-                      Free to join • No registration required
-                    </p>
-                  </div>
-                </div>
+
+                {/* CTA Button */}
+                <a
+                  href="https://discord.gg/aAHD6f4zFp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/button relative inline-flex items-center justify-center w-full rounded-2xl bg-white text-gray-900 px-6 py-4 text-sm font-semibold shadow-xl hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-300 hover:scale-105 overflow-hidden hover:bg-gray-100"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    Join Discord Server
+                    <ArrowRight className="w-4 h-4 group-hover/button:translate-x-1 transition-transform duration-300" />
+                  </span>
+                </a>
+
+                <p className="text-xs text-gray-600 mt-4 text-center">
+                  Free to join • No registration required
+                </p>
+
+                {/* Decorative Elements */}
+                <div className="absolute top-4 right-4 w-20 h-20 bg-gray-600 rounded-full opacity-5 blur-xl"></div>
+                <div className="absolute bottom-4 left-4 w-16 h-16 bg-gray-500 rounded-full opacity-5 blur-xl"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </FlickeringGrid>
   );
 } 
