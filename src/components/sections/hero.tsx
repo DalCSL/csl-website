@@ -26,8 +26,8 @@ export function Hero() {
             {/* Actions */}
             <div className="relative z-10 flex justify-center gap-4">
               <Button variant="default" size="lg" asChild className="rounded-2xl py-6 px-10">
-                <Link href="#contact" className="flex items-center gap-2">
-                  Get Started
+                <Link href="#discord" className="flex items-center gap-2">
+                  Join Us
                 </Link>
               </Button>
 

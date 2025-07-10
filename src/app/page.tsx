@@ -6,6 +6,7 @@ import Team from "@/components/sections/team-info";
 import { Achievement } from "@/components/sections/achievement";
 import Testimonials from "@/components/sections/testimonials";
 import { About } from "@/components/sections/about";
+import { Discord } from "@/components/sections/discord";
 
 export default function HomePage() {
   return (
@@ -14,9 +15,10 @@ export default function HomePage() {
       <About />
       <Services />
       <Achievement />
+      <Discord />
       <CTA />
       <Team />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <JoinUs />
     </div>
   );
