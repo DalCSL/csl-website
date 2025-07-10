@@ -41,6 +41,16 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  --animate-first: moveVertical 30s ease infinite;
+  --animate-second: moveInCircle 20s reverse infinite;
+  --animate-third: moveInCircle 40s linear infinite;
+  --animate-fourth: moveHorizontal 40s ease infinite;
+  --animate-fifth: moveInCircle 20s ease infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+  --animate-aurora: aurora 60s linear infinite;
+  --animate-background-gradient: background-gradient var(--background-gradient-speed, 15s) cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+
   @keyframes marquee {
   from {
     transform: translateX(0);
@@ -57,25 +67,73 @@
     transform: translateY(calc(-100% - var(--gap)));
     }
   }
-  --animate-aurora: aurora 8s ease-in-out infinite alternate
-;
+
+  @keyframes moveHorizontal {
+    0% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+      transform: translateX(50%) translateY(10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+  }
+
+  @keyframes moveInCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes moveVertical {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  @keyframes orbit {
+    0% {
+      transform: rotate(calc(var(--angle) * 1deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+    }
+    100% {
+      transform: rotate(calc(var(--angle) * 1deg + 360deg))
+        translateY(calc(var(--radius) * 1px))
+        rotate(calc((var(--angle) * -1deg) - 360deg));
+    }
+  }
+
   @keyframes aurora {
-  0% {
-    background-position: 0% 50%;
-    transform: rotate(-5deg) scale(0.9);}
-  25% {
-    background-position: 50% 100%;
-    transform: rotate(5deg) scale(1.1);}
-  50% {
-    background-position: 100% 50%;
-    transform: rotate(-3deg) scale(0.95);}
-  75% {
-    background-position: 50% 0%;
-    transform: rotate(3deg) scale(1.05);}
-  100% {
-    background-position: 0% 50%;
-    transform: rotate(-5deg) scale(0.9);}}
-  --animate-background-gradient: background-gradient var(--background-gradient-speed, 15s) cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
 
   @keyframes background-gradient {
     0%, 100% {
@@ -88,19 +146,9 @@
     60% {
       transform: translate(calc(100% * var(--tx-3, 1)), calc(100% * var(--ty-3, -1)));}
     80% {
-      transform: translate(calc(100% * var(--tx-4, -1)), calc(100% * var(--ty-4, -1)));}}
-  @keyframes background-gradient {
-  0%, 100% {
-    transform: translate(0, 0);
-    animationDelay: var(--background-gradient-delay, 0s);}
-  20% {
-    transform: translate(calc(100% * var(--tx-1, 1)), calc(100% * var(--ty-1, 1)));}
-  40% {
-    transform: translate(calc(100% * var(--tx-2, -1)), calc(100% * var(--ty-2, 1)));}
-  60% {
-    transform: translate(calc(100% * var(--tx-3, 1)), calc(100% * var(--ty-3, -1)));}
-  80% {
-    transform: translate(calc(100% * var(--tx-4, -1)), calc(100% * var(--ty-4, -1)));}}}
+      transform: translate(calc(100% * var(--tx-4, -1)), calc(100% * var(--ty-4, -1)));}
+  }
+}
 
 :root {
   --radius: 0.625rem;
@@ -177,71 +225,5 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@theme inline {
-  --animate-first: moveVertical 30s ease infinite;
-  --animate-second: moveInCircle 20s reverse infinite;
-  --animate-third: moveInCircle 40s linear infinite;
-  --animate-fourth: moveHorizontal 40s ease infinite;
-  --animate-fifth: moveInCircle 20s ease infinite;
-
-  @keyframes moveHorizontal {
-    0% {
-      transform: translateX(-50%) translateY(-10%);
-    }
-    50% {
-      transform: translateX(50%) translateY(10%);
-    }
-    100% {
-      transform: translateX(-50%) translateY(-10%);
-    }
-  }
-
-  @keyframes moveInCircle {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes moveVertical {
-    0% {
-      transform: translateY(-50%);
-    }
-    50% {
-      transform: translateY(50%);
-    }
-    100% {
-      transform: translateY(-50%);
-    }
-  }
-
-  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
-
-  @keyframes scroll {
-    to {
-      transform: translate(calc(-50% - 0.5rem));
-    }
-  }
-
-  --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
-
-  @keyframes orbit {
-    0% {
-      transform: rotate(calc(var(--angle) * 1deg))
-        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
-    }
-    100% {
-      transform: rotate(calc(var(--angle) * 1deg + 360deg))
-        translateY(calc(var(--radius) * 1px))
-        rotate(calc((var(--angle) * -1deg) - 360deg));
-    }
   }
 }
