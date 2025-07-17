@@ -109,7 +109,7 @@ const achievements = [
 
 export function Achievement() {
   return (
-    <div className="min-h-screen flex items-center py-24 sm:py-32" id="achievement">
+    <div className="min-h-screen flex items-center justify-center py-24 sm:py-32" id="achievement">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <motion.div
           className="mx-auto max-w-2xl lg:text-center mb-16"

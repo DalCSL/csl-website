@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <GradientBackground className="py-24 sm:py-32 min-h-screen flex items-center" id="testimonials">
+    <GradientBackground className="py-24 sm:py-32 min-h-screen flex items-center justify-center" id="testimonials">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <div className="mx-auto max-w-2xl lg:text-center mb-16">
           <h2 className="text-base font-semibold leading-7 text-indigo-600">Testimonials</h2>

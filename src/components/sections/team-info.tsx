@@ -50,7 +50,7 @@ const people = [
 
 export default function Team() {
   return (
-    <LargeGridBackground className="bg-white min-h-screen flex items-center py-24 sm:py-32" id="team">
+    <LargeGridBackground className="bg-white min-h-screen flex items-center justify-center py-24 sm:py-32" id="team">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <div className="mx-auto max-w-2xl lg:text-center mb-16">
           <h2 className="text-base font-semibold leading-7 text-indigo-600">Our Team</h2>
