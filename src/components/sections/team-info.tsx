@@ -50,42 +50,38 @@ const people = [
 
 export default function Team() {
   return (
-    <LargeGridBackground className="flex flex-col items-center bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0" id="team">
-      <div className="container max-w-7xl px-4 relative">
+    <LargeGridBackground className="bg-white min-h-screen flex items-center py-24 sm:py-32" id="team">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
         <div className="mx-auto max-w-2xl lg:text-center mb-16">
           <h2 className="text-base font-semibold leading-7 text-indigo-600">Our Team</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Meet the Team
+            Meet the people behind CSL
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Backed by solid experience across multiple industries, our team brings the right mix of insight and execution.
+            Our dedicated team of students and alumni work tirelessly to provide the best resources and support for our community.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
           {people.map((person) => (
-            <div key={person.name} className="mb-6 group">
-              <Link href={person.linkedin} target="_blank" rel="noopener noreferrer" className="block">
-                <DirectionAwareHover 
-                  imageUrl={person.imageUrl}
-                  className="cursor-pointer transition-transform duration-300"
-                >
-                  <div className="flex flex-col">
-                    <h1 className="text-white text-lg font-bold mb-1 drop-shadow-lg">
-                      {person.name}
-                    </h1>
-                    <h4 className="text-white text-md font-light mb-3 drop-shadow-lg">
-                      {person.role}
-                    </h4>
-                    <div className="flex items-center gap-2">
-                      <AiOutlineLinkedin className="h-5 w-5 text-white drop-shadow-lg" />
-                      <span className="text-white text-sm font-medium drop-shadow-lg">
-                        Connect on LinkedIn
-                      </span>
-                    </div>
+            <div key={person.name} className="group">
+              <DirectionAwareHover
+                imageUrl={person.imageUrl}
+                className="w-full h-80 rounded-lg object-cover"
+              >
+                <div className="flex flex-col space-y-2">
+                  <h3 className="text-2xl font-bold text-white">{person.name}</h3>
+                  <p className="text-base text-gray-300">{person.role}</p>
+                  <div className="flex space-x-2">
+                    <Link
+                      href={person.linkedin}
+                      className="text-white hover:text-indigo-300 transition-colors"
+                    >
+                      <AiOutlineLinkedin size={20} />
+                    </Link>
                   </div>
-                </DirectionAwareHover>
-              </Link>
+                </div>
+              </DirectionAwareHover>
             </div>
           ))}
         </div>

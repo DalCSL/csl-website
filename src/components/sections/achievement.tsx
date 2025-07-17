@@ -109,18 +109,22 @@ const achievements = [
 
 export function Achievement() {
   return (
-    <div className="pt-24 sm:pt-32 pb-12 sm:pb-16 max-w-sm md:max-w-6xl mx-auto" id="achievements">
-      <div className="mx-auto max-w-none px-6 lg:px-8">
-        {/* Achievements Section */}
-        <div className="mx-auto max-w-4xl lg:text-center mb-16">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">Our Achievements</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Excellence in Competitive Programming
+    <div className="min-h-screen flex items-center py-24 sm:py-32" id="achievement">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+        <motion.div
+          className="mx-auto max-w-2xl lg:text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-base font-semibold leading-7 text-indigo-600">Achievement</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Our Success in Numbers
           </p>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Our community has achieved remarkable milestones in competitive programming and software development.
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            See how our community has grown and achieved success in competitive programming and career development.
           </p>
-        </div>
+        </motion.div>
 
         <div className="w-full h-full mb-24 max-w-sm md:max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 h-full">
