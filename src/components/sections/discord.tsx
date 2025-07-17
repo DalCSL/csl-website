@@ -91,7 +91,7 @@ export function Discord() {
           </div>
 
           {/* Discord CTA Card */}
-          <div className="flex justify-center xl:justify-end transition-all duration-1000 delay-700 transfor">
+          <div className="flex justify-center xl:justify-end transition-all duration-1000 delay-700 transform">
             <div className="relative group">
               {/* Glow Effect */}
               <div className="absolute -inset-1 bg-gray-600 rounded-3xl blur opacity-20 transition duration-1000"></div>
