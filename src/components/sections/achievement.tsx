@@ -109,8 +109,8 @@ const achievements = [
 
 export function Achievement() {
   return (
-    <div className="min-h-screen flex items-center justify-center py-24 sm:py-32" id="achievement">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+    <div className="w-full min-h-screen flex items-center justify-center py-24 sm:py-32" id="achievement">
+      <div className="w-full px-6 lg:px-8 relative">
         <motion.div
           className="mx-auto max-w-2xl lg:text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -126,7 +126,7 @@ export function Achievement() {
           </p>
         </motion.div>
 
-        <div className="w-full h-full mb-24 mx-auto">
+        <div className="w-full h-full mb-24 mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 h-full">
             <div className="md:col-span-2">
               <BentoCard
