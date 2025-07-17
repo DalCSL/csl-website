@@ -126,7 +126,7 @@ export function Achievement() {
           </p>
         </motion.div>
 
-        <div className="w-full h-full mb-24 max-w-sm md:max-w-6xl mx-auto">
+        <div className="w-full h-full mb-24 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 h-full">
             <div className="md:col-span-2">
               <BentoCard

@@ -7,7 +7,7 @@ const content = [
   {
     title: "Better Coding",
     description:
-        "The Dalhousie Computer Science Leaders Society provides an environment for students to explore and deepen their understanding of computer science fundamentals: problem-solving,data structures, algorithms, cloud computing, systems design,and real-world applications.",
+      "The Dalhousie Computer Science Leaders Society provides an environment for students to explore and deepen their understanding of computer science fundamentals: problem-solving,data structures, algorithms, cloud computing, systems design,and real-world applications.",
     content: (
       <div className="relative w-full h-full">
         <Image src="/assets/c-code.png" alt="c-code" fill />
@@ -38,7 +38,7 @@ const content = [
 export function About() {
   return (
     <div className="w-full min-h-[100vh]" id="about">
-      <StickyScroll content={content}/>
+      <StickyScroll content={content} />
     </div>
   );
 }

@@ -48,7 +48,7 @@ export function Discord() {
     >
 
 
-      <div className="relative mx-auto max-w-sm md:max-w-6xl px-6 lg:px-8 w-full">
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 w-full">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <div className="mx-auto max-w-4xl lg:text-center mb-16">
@@ -67,24 +67,24 @@ export function Discord() {
               {features.map((feature, index) => (
                 <div
                   key={feature.name}
-                  className="group relative bg-white/90 backdrop-blur-md rounded-2xl p-6 border border-gray-600/30 hover:bg-white/15 transition-all duration-500 transform"
+                  className="group relative bg-white/90 backdrop-blur-md rounded-2xl p-6 border border-gray-600/30 transition-all duration-500 transform"
                 >
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="p-2 rounded-lg bg-gray-200 transition-transform duration-300 group-hover:scale-110">
+                      <div className="p-2 rounded-lg bg-gray-200 transition-transform duration-300">
                         <feature.icon className="h-5 w-5 text-gray-900" />
                       </div>
-                      <h3 className="font-semibold text-gray-900 group-hover:text-gray-700 transition-colors">
+                      <h3 className="font-semibold text-gray-900">
                         {feature.name}
                       </h3>
                     </div>
-                    <p className="text-sm text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors">
+                    <p className="text-sm text-gray-700 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
 
                   {/* Animated Border */}
-                  <div className="absolute inset-0 rounded-2xl bg-gray-500 opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-sm -z-10"></div>
+                  <div className="absolute inset-0 rounded-2xl bg-gray-500 opacity-0 transition-opacity duration-300 blur-sm -z-10"></div>
                 </div>
               ))}
             </div>
@@ -94,9 +94,9 @@ export function Discord() {
           <div className="flex justify-center xl:justify-end transition-all duration-1000 delay-700 transfor">
             <div className="relative group">
               {/* Glow Effect */}
-              <div className="absolute -inset-1 bg-gray-600 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
+              <div className="absolute -inset-1 bg-gray-600 rounded-3xl blur opacity-20 transition duration-1000"></div>
 
-              <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl max-w-md w-full border border-gray-600/30 group-hover:bg-white/15 transition-all duration-300">
+              <div className="relative bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl max-w-md w-full border border-gray-600/30 transition-all duration-300">
                 {/* Discord Icon with Animation */}
                 <div className="text-center mb-6">
                   <div className="relative mx-auto h-20 w-20 rounded-2xl flex items-center justify-center mb-4">
@@ -129,7 +129,7 @@ export function Discord() {
                   >
                     <span className="relative z-10 flex items-center gap-2 text-white">
                       Join Discord Server
-                      <ArrowRight className="w-4 h-4 group-hover/button:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="w-4 h-4 transition-transform duration-300" />
                     </span>
                   </RainbowButton>
                 </Link>
