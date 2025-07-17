@@ -67,7 +67,7 @@ export function Discord() {
               {features.map((feature, index) => (
                 <div
                   key={feature.name}
-                  className="group relative bg-white/90 backdrop-blur-md rounded-2xl p-6 border border-gray-600/30 hover:bg-white/15 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer transform"
+                  className="group relative bg-white/90 backdrop-blur-md rounded-2xl p-6 border border-gray-600/30 hover:bg-white/15 transition-all duration-500 transform"
                 >
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-3">
@@ -82,9 +82,6 @@ export function Discord() {
                       {feature.description}
                     </p>
                   </div>
-
-                  {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gray-600 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
 
                   {/* Animated Border */}
                   <div className="absolute inset-0 rounded-2xl bg-gray-500 opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-sm -z-10"></div>
