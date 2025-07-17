@@ -1,42 +1,36 @@
 {
+  "name": "dalcsl-new-web",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.16",
-    "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/react-slot": "^1.2.3",
+    "@shikijs/transformers": "^3.8.0",
     "@tabler/icons-react": "^3.34.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.525.0",
-    "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.23.6",
-    "next": "^15.3.5",
+    "next": "15.4.1",
     "next-themes": "^0.4.6",
-    "postcss": "^8.5.6",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-icons": "^4.8.0",
-    "shiki": "^3.7.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-icons": "^5.5.0",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "@shikijs/transformers": "^3.7.0",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/postcss": "^4.1.11",
-    "@types/node": "^12.12.21",
-    "@types/react": "^18.3.23",
-    "@types/react-dom": "^18.3.7",
-    "eslint-config-next": "^15.3.5",
-    "postcss-preset-env": "^8.0.1",
-    "tailwindcss": "^4.1.11",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
     "tw-animate-css": "^1.3.5",
-    "typescript": "^5.8.3"
+    "typescript": "^5"
   }
 }
