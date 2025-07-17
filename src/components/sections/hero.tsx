@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <BackgroundGradientAnimation id="home">
       <BlurFade delay={0.1} duration={0.4} direction="up" inView={true} className="pt-24 md:pt-6">
-        <div className="w-full flex-1 pt-24 sm:pt-48 pb-12">
+        <div className="w-full flex-1 pt-24 pb-12">
 
           {/* Hero Text */}
           <div className="max-w-sm sm:max-w-4xl mx-auto text-center flex flex-col gap-10">
@@ -43,7 +43,7 @@ export function Hero() {
               <h3 className="text-md md:text-xl lg:text-2xl font-semibold text-slate-600">
                 Our members have gotten offers and interviews from these companies
               </h3>
-              <Companies />
+                <Companies />
             </div>
           </div>
         </div>
