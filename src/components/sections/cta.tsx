@@ -4,7 +4,7 @@ export default function CTA() {
   return (
     <GridBackground className="bg-white min-h-screen flex items-center justify-center">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 w-full py-24 sm:py-32">
-        <div className="relative isolate overflow-hidden bg-gray-900 pt-16 shadow-2xl md:pt-24 lg:flex lg:gap-x-20 lg:px-12 lg:pt-0 w-full min-h-[500px] items-center justify-center rounded-3xl">
+        <div className="relative isolate overflow-hidden bg-gray-900 pt-16 shadow-2xl md:pt-24 lg:flex lg:gap-x-16 lg:px-12 lg:pt-0 w-full min-h-[500px] items-center justify-center rounded-3xl">
           <svg
             viewBox="0 0 1024 1024"
             className="absolute top-1/2 left-1/2 -z-10 h-256 w-5xl -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:translate-y-0 lg:-translate-x-1/2"
@@ -43,14 +43,16 @@ export default function CTA() {
               </a>
             </div>
           </div>
-          <div className="relative mt-16 h-80 lg:mt-8 flex-shrink-0 lg:w-[500px] px-6 sm:px-8 lg:px-12">
-            <img
-              className="w-full h-full object-cover rounded-md bg-white/5 ring-1 ring-white/10"
-              src="/assets/leetcode.webp"
-              alt="App screenshot"
-              width={1824}
-              height={1080}
-            />
+          <div className="relative mt-16 h-96 sm:h-[28rem] lg:mt-8 flex-shrink-0 lg:w-[600px] lg:h-[400px] px-6 sm:px-8 lg:px-12">
+            <div className="relative mt-16 h-80 lg:mt-8">
+              <img
+                className="absolute top-0 left-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                src="/assets/leetcode.webp"
+                alt="App screenshot"
+                width={1824}
+                height={1080}
+              />
+            </div>
           </div>
         </div>
       </div>
