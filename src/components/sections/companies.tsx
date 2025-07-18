@@ -25,7 +25,7 @@ export function Companies() {
     { src: "/assets/logos/sentry.png", alt: "Sentry" },
     { src: "/assets/logos/super.com.png", alt: "Super.com" },
     { src: "/assets/logos/bloomberg.webp", alt: "Bloomberg" },
-    { src: "/assets/logos/yelp.svg", alt: "Yelp" },
+    { src: "/assets/logos/yelp.png", alt: "Yelp" },
     // { src: "/assets/logos/genesys.png", alt: "Genesys" },
   ];
 
