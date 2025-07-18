@@ -3,7 +3,7 @@ import GridBackground from "@/components/backgrounds/gird-background";
 export default function CTA() {
   return (
     <GridBackground className="bg-white min-h-screen flex items-center justify-center">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">
+      <div className="px-6 lg:px-8 py-24 sm:py-32">
         <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-8 md:pt-24 lg:flex lg:gap-x-20 lg:px-12 lg:pt-0">
           <svg
             viewBox="0 0 1024 1024"
