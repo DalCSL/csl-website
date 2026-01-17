@@ -38,7 +38,7 @@ const people = [
     name: "Huy Huyn",
     role: "Software Engineer",
     imageUrl: "/assets/team/huy.jpg",
-    linkedin: "https://www.linkedin.com/in/mouhamadou-falilou-niang-a0aba8172/",
+    linkedin: "https://www.linkedin.com/in/huyghuynh/",
   },
   {
     name: "Falilou",
@@ -48,9 +48,9 @@ const people = [
   },
   {
     name: "Tobi",
-    role: "Advisor",
+    role: "Executive Advisor",
     imageUrl: "/assets/team/tobi.jpg",
-    linkedin: "https://www.linkedin.com/in/mouhamadou-falilou-niang-a0aba8172/",
+    linkedin: "https://www.linkedin.com/in/tobi-onibudo/",
   },
 ];
 
